@@ -4,7 +4,6 @@ var bigResult = document.getElementById('bigResult');
 var smallResult = document.getElementById('smallResult');
 var bigResultValue = '';
 var smallResultValue = '';
-var memory = 0;
 
 var clearZero = function () {
  bigResult.textContent= '';
@@ -31,7 +30,6 @@ var allClear = function (){
 	bigResult.textContent = '0';
 	smallResult.textContent= '0';
 	action = 0;
-	memory = 0;
 	equalCounter =0;
 }
 
@@ -54,17 +52,15 @@ var equal = function (bigResultValue){
 	smallResult.textContent = eval(bigResultValue); 
 	
 	smallResultValue = eval(bigResultValue);
-	memory = parseInt(smallResultValue);
-	 equalCounter +=1;
+	equalCounter +=1;
+	updateDisplay();
 
 	
 }
 
 var operation = function() {
-	console.log(memory+bigResultValue);
 	if ( equalCounter !== 0){
-	bigResult.textContent = eval(memory+bigResultValue);
-	bigResultValue = memory;
-	console.log(memory);
+	bigResult.textContent = eval(smallResultValue+bigResultValue);
+	console.log(smallResultValue+bigResultValue);
 	}
 }

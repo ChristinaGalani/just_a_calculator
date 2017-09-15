@@ -141,14 +141,28 @@ button{
 @media (max-width: 444px) { 
 
 	button {
+		height: 16%;
+    	width: 24%
+	}
+
+	.point{
+		width: 20%;
+	}
+
+	.zero {
 		height: 18%;
-    	width: 24%;
+		width: 20%;
+	}
+
+	.equal{
+		height: 25%;
 	}
 
 	.right_keyboard {
 
 		width: 45%;
-        margin: 20px 12% 0px -10%;
+    	height: 310px;
+    	margin: 20px 12% 0px -10%;
 	}
 
 	.right_keyboard button {
